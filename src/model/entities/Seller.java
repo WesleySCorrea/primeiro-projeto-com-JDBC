@@ -9,7 +9,7 @@ public class Seller implements Serializable {
     private Integer id;
     private String name;
     private String email;
-    private Date date;
+    private Date birthDate;
     private Double salary;
 
     private Department department;
@@ -18,11 +18,11 @@ public class Seller implements Serializable {
 
     }
 
-    public Seller(Integer id, String name, String email, Date date, Double salary, Department department) {
+    public Seller(Integer id, String name, String email, Date birthDate, Double salary, Department department) {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.date = date;
+        this.birthDate = birthDate;
         this.salary = salary;
         this.department = department;
     }
@@ -52,11 +52,11 @@ public class Seller implements Serializable {
     }
 
     public Date getDate() {
-        return date;
+        return birthDate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
     }
 
     public Double getSalary() {
@@ -94,8 +94,8 @@ public class Seller implements Serializable {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
-                ", date=" + date +
-                ", salary=" + salary +
+                ", birthDate=" + birthDate +
+                ", baseSalary=" + salary +
                 ", department=" + department +
                 '}';
     }
